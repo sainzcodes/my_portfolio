@@ -1,3 +1,5 @@
+'''Password Generator'''
+
 #Import the module in order to use it on the program
 import random
 
