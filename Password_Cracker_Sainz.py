@@ -1,10 +1,15 @@
-# Imports
+'''Password Cracker by Santiago Sainz'''
+
+# import modules
 import itertools
 import time
 
 
-# Brute force function
-#Duration:> 5 minutes
+#declare the paramaters for the program
+#socket.AF selects IPV4
+#socket.SOCL_STREAM selects tcp
+#processing duration:> 5 minutes
+#Returns the number of attempts and distance
 def tryPassword(passwordSet, stringTypeSet):
     start = time.time()
     chars = stringTypeSet
@@ -20,7 +25,9 @@ def tryPassword(passwordSet, stringTypeSet):
 
 
 password = input("Password >")
-# Allowed characters
+
+#list of characthers that will be used to crack the password
+#return the password, number of attempts, and time to the user 
 stringType = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_-+=[{]}|:;'\",<.>/?"
 tries, timeAmount = tryPassword(password, stringType)
-print("CyanCoding's BFPC cracked the password %s in %s tries and %s seconds!" % (password, tries, timeAmount))
+print("Sainz's BFPC cracked the password %s in %s tries and %s seconds!" % (password, tries, timeAmount))

@@ -1,13 +1,13 @@
-'''Socket Programming in Python'''
+'''Socket Programming by Santiago Sainz'''
 
-#import libraries
+#import modules
 import socket
 import sys
 
-#Declar the paramaters for the program
+#declare the paramaters for the program
 #Socket.AF selects IPV4
 #socket.SOCL_STREAM selects tcp
-#Prints error message
+#Return error message to the user
 try:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print('socket succesfully created!')
@@ -19,7 +19,7 @@ port = 80
 
 #Pings to an specific domain
 #gaierror checks for the dns
-#prints a success mesage
+#Return a success mesage to the user along with the ip address
 try:
     host_ip = socket.gethostbyname('www.github.com')
 except socket.gaierror:
